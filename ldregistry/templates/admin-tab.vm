@@ -1,6 +1,6 @@
 ## Actions for an item
 
-  ## Set statis for the entity itself
+  ## Set status for the entity itself
   #if($lib.reg.isPermitted("StatusUpdate", $uri))
     #if(!$foundAction)
       <h3 class="text-center">Actions</h3>
