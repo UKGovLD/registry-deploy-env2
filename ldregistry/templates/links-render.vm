@@ -14,7 +14,9 @@
   #set($model=$response.entity)
   #set($target="$registry.baseURI/system/links")
   #set($node=$model.getNode($target))
-  #foreach($linkTemplate in $node.connectedNodes("rdfs:member"))
+  #set($links = $node.connectedNodes("rdfs:member"))
+  $lib.reg.addLabelsFor($entity, $links)
+  #foreach($linkTemplate in $links)
 
     #set($path = $linkTemplate.getPropertyValue("ui:path").lexicalForm)
     #set($links = $entity.connectedNodes($path))
