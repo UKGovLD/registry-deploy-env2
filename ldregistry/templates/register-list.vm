@@ -40,7 +40,8 @@
         #end
         </tbody>
   	  </table>
-
+      
+      #set($qparam="&listView=true")
       #parse("paging.vm")  
 
   	</div>
